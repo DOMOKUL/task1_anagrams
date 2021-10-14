@@ -12,7 +12,7 @@ public class Anagram {
         return stringBuilder.toString();
     }
 
-    public String reverseWordWithoutNotLetters(String word) {
+    private String reverseWordWithoutNotLetters(String word) {
         char[] chars = word.toCharArray();
         int leftSide = 0;
         int rightSide = chars.length - 1;
