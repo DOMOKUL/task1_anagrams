@@ -1,5 +1,7 @@
 package com.company;
 
+import com.google.common.annotations.VisibleForTesting;
+
 import java.util.StringJoiner;
 
 public class Anagram {
@@ -13,7 +15,8 @@ public class Anagram {
         return stringJoiner.toString();
     }
 
-    private String reverseWordWithoutNotLetters(String word) {
+    @VisibleForTesting
+    String reverseWordWithoutNotLetters(String word) {
         char[] chars = word.toCharArray();
         int leftSide = 0;
         int rightSide = chars.length - 1;
