@@ -3,6 +3,7 @@ package com.company;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class AnagramTest {
@@ -15,6 +16,6 @@ class AnagramTest {
 
     @Test
     void reverse_reverseLine_whenInputOnlyLetters() {
-        assertNotEquals("dcba hgfe", anagram.process("abcd efgh"));
+        assertEquals("dcba hgfe", anagram.process("abcd efgh"));
     }
 }

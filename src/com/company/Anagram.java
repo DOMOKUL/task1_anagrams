@@ -1,15 +1,16 @@
 package com.company;
 
+import java.util.StringJoiner;
+
 public class Anagram {
 
     public String process(String text) {
-        StringBuilder stringBuilder = new StringBuilder();
+        StringJoiner stringJoiner = new StringJoiner(" ");
         String[] words = text.split(" ");
         for (String word : words) {
-            stringBuilder.append(reverseWordWithoutNotLetters(word));
-            stringBuilder.append(" ");
+            stringJoiner.add(reverseWordWithoutNotLetters(word));
         }
-        return stringBuilder.toString();
+        return stringJoiner.toString();
     }
 
     private String reverseWordWithoutNotLetters(String word) {
