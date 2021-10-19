@@ -5,12 +5,14 @@ import java.util.Scanner;
 
 public class AnagramApp {
 
+    private static Anagram anagram = new Anagram();
+
+    public static void setAnagram(Anagram anagram) {
+        AnagramApp.anagram = anagram;
+    }
+
     public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in)) {
-            String text = scanner.nextLine();
-            Anagram anagram = new Anagram();
-            String result = anagram.process(text);
-            System.out.println(result);
+         System.out.println(anagram.process(anagram));
 
         }
     }
