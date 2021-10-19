@@ -73,4 +73,9 @@ class AnagramTest {
         assertThrows(NullPointerException.class, () -> anagram.reverseWordWithoutNotLetters(null));
     }
 
+    @Test
+    void reverseWord_shouldDoNotReverseWordWithNumbers_whenWordContainOnlyNumbers() {
+        assertEquals("123456", anagram.reverseWordWithoutNotLetters("123456"));
+    }
+
 }
